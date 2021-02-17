@@ -30,8 +30,8 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IProductService,ProductManager>();
-            //singleton tüm bellekte bir tane productmanager oluþturuyor.Tüm clientlara ayný instance veriyor.(ayný referans)Ýçerisinde data turmuyorsak kulanýrýz.
+            services.AddSingleton<IProductService, ProductManager>();
+            //singleton tüm bellekte bir tane productmanager oluþturuyor.tüm clientlara ayný instance veriyor.(ayný referans)içerisinde data turmuyorsak kulanýrýz.
             services.AddSingleton<IProductDal, EfProductDal>();
         }
 
